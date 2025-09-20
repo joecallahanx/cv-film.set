@@ -1,6 +1,7 @@
 body {
   font-family: sans-serif;
   display: flex;
+  flex-direction: column; /* stack heading on top, images below */
   justify-content: center;
   align-items: center;
   height: 100vh;
@@ -10,6 +11,14 @@ body {
 
 p {
     color: #ffffff;
+  font-weight: bold;
+  margin: 0;
+  letter-spacing: 2px;
+}
+
+.battle {
+  display: flex;
+  gap: 40px;
 }
 
 .pic {
@@ -23,4 +32,40 @@ p {
 
 .pic:hover {
   transform: scale(1.05);
+}
+#leaderboard {
+  background: #111;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 300px;
+  margin: 20px auto;
+  color: #fff;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+#leaderboard h2 {
+  margin-bottom: 15px;
+  font-size: 22px;
+  text-transform: uppercase;
+}
+
+#leaderboard p {
+  margin: 8px 0;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+#leaderboard button {
+  background: #333;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin-top: 15px;
+  transition: background 0.2s;
+}
+
+#leaderboard button:hover {
+  background: #555;
 }
